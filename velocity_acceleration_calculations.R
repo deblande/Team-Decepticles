@@ -19,3 +19,5 @@ a_t=a*cos(theta_a-theta_v) #tangential Acceleration
 a_n=a*sin(theta_a-theta_v) #normal Acceleration
 
 
+
+
