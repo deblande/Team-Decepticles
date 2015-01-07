@@ -18,6 +18,22 @@ theta_a=atan2(a_y,a_x) #acceleration angle (This creates NaN's when the driver i
 a_t=a*cos(theta_a-theta_v) #tangential Acceleration
 a_n=a*sin(theta_a-theta_v) #normal Acceleration
 
+#Radius of curvature using 3 points (May work better with smoothed position data)
+x1=position[1:(l-2),1]
+x2=position[2:(l-1),1]
+x3=position[3:l,1]
+y1=position[1:(l-2),2]
+y2=position[2:(l-1),2]
+y3=position[3:l,2]
+# Equation for radius of curvature given 3 points. 
+r_c=sqrt(((x2-x1)^2+(y2-y1)^2)*((x2-x3)^2+(y2-y3)^2)*((x3-x1)^2+(y3-y1)^2))/(2*abs(x1*y2+x2*y3+x3*y1-x1*y3-x2*y1-x3*y2))
 
+#Plot example acceleration
+plot(speed[115:130])
+axis(2,at=5*(-1:3))
+lines(a_t[115:130])
 
+#Plot example speed vs. radius of curvature
+#putting a best fit line on this could yield a good predictor
+plot(r_c,speed,xlim=c(0,200),ylim=c(0,15))
 
