@@ -1,0 +1,58 @@
+Basic Git Workflow:
+
+//THIS ASSUMES YOU HAVE A CLONE OF THE GITHUB DIRECTORY ALREADY SET UP
+
+ON GITHUB:
+	2 branches
+		master
+		working
+
+When you want to begin working:
+
+ON LOCAL COMPUTER:
+
+-make sure you are in 'working' branch, you can use the command below to double check
+
+	git branch //The current branch you are in should be highlighted or stared
+
+-pull latest 'working' branch from github
+
+	git pull origin working
+
+-create new branch only on local machine to begin work. The name can be whatever, in this example it is newBranch1
+
+	git checkout -b newBranch1
+
+-now you are free to work on the project as normal until your stopping point is reached
+
+-add your changes to be committed:
+
+	git add .
+
+-commit your changes with a brief description of what you did
+
+	git commit -am "message goes in the quotes"
+
+-switch back to the working branch:
+
+	git checkout working
+
+-pull from github to make sure you have the latest working branch
+
+	git pull origin working
+
+-merge your new branch with working
+
+	git merge newBranch1
+
+-fix any conflicts, then push to the working branch on github
+
+	git push origin working
+
+-once uploaded you can delete your extra branch
+	
+	git branch -D newBranch1
+
+//THIS FLOW SHOULD HELP KEEP ALL OF THE CONFLICTS ON OUR RESPECTIVE MACHINES AND KEEP THE GITHUB 'WORKING' BRANCH CLEAN
+
+//ONCE IN AWHILE YOU CAN MERGE THE WORKING BRANCH WITH THE MASTER IF YOU WANT
