@@ -1,6 +1,5 @@
 # Loads file 1_1 (driver 1, trip 1) Computes velocity, acceleration. These calculations will be done wrt a
 # fixed reference frame. 
-getwd()
 datapath = c('../drivers/1/4.csv')
 position = read.csv(datapath)
 l=length(position[,1])
