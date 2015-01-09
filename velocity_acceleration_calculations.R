@@ -1,9 +1,9 @@
 # Loads file 1_1 (driver 1, trip 1) Computes velocity, acceleration. These calculations will be done wrt a
 # fixed reference frame. 
-
-datapath = c('/Users/evandeblander/Documents/R/Driver/drivers/1/4.csv')
+getwd()
+datapath = c('../drivers/1/4.csv')
 position = read.csv(datapath)
-l=length(data[,1])
+l=length(position[,1])
 t=1:l
 v_x=(position[3:l,1]-position[1:(l-2),1] )/2 # vx(n)=(x(n+1)-x(n-1))/2t
 v_y=(position[3:l,2]-position[1:(l-2),2] )/2
