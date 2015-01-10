@@ -16,7 +16,7 @@
 
 #Basic calculations (to be replaced by functions?)
 
-datapath = c('../drivers/1/11.csv')
+datapath = c('../drivers/1/4.csv')
 position = read.csv(datapath)
 l=length(position[,1])
 t=1:l
