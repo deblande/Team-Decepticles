@@ -1,0 +1,93 @@
+Independent driving pattern factors and their influence on fuel-use and exhaust emission factors
+http://www.sciencedirect.com/science/article/pii/S1361920901000037
+
+Driving pattern parameter	Denotation
+Average speed	v_avg
+S.D. of speed	v_std
+Average acceleration	a_avg
+S.D. of acceleration	a_std
+Average deceleration	r_avg
+
+Deceleration S.D.	r_std
+Number of acceleration/deceleration shifts per 100 m where the difference between adjacent local max-speed and min-speed was 	mm_100m
+Number of acceleration/deceleration shifts per 100 m where the difference between adjacent local max-speed and min-speed was 	lmm_100m
+Number of acceleration/deceleration shifts per 100 s where the difference between adjacent local max-speed and min-speed was 	mm_100s
+Number of acceleration/deceleration shifts per 100 s where the difference between adjacent local max-speed and min-speed was 	lmm_100s
+Relative positive acceleration: , 	RPA
+Integral of the square of the acceleration :, 	Int_a2
+% of time when speed 	pc_stopt
+Average stop duration	stopdura
+
+Number of stops per kilometre	stop_pkm
+% of time in speed interval 0–15 km/h	v0_15
+% of time in speed interval 15–30 km/h	v15_30
+% of time in speed interval 30–50 km/h	v30_50
+% of time in speed interval 50–70 km/h	v50_70
+% of time in speed interval 70–90 km/h	v70_90
+% of time in speed interval 90–110 km/h	v90_110
+% of time in speed 	v110_200
+% of time in deceleration interval (−10)–(−2.5) m/s2	r100_25
+% of time in deceleration interval (−2.5)–(−1.5) m/s2	r25_15
+% of time in deceleration interval (−1.5)–(−1.0) m/s2	r15_10
+% of time in deceleration interval 	r10_05
+% of time in deceleration interval (−0.5)–(0) m/s2	r05_0
+% of time in acceleration interval 0–0.5 m/s2	a0_05
+% of time in acceleration interval 0.5–1.0 m/s2	a05_1
+% of time in acceleration interval 1.0–1.5 m/s2	a1_15
+% of time in acceleration interval 1.5–2.5 m/s2	a15_25
+%− of time in acceleration interval 2.5–10 m/s2	a25_100
+Average engine speed	rpm_avg
+
+Engine speed S.D.	rpm_std
+% of time with engine speed 0–1500 rpm	rpm0_15
+% of time with engine speed 1500–2500 rpm	rpm15_25
+% of time with engine speed 2500–3500 rpm	rpm25_35
+% of time with engine speed >3500 rpm	rpm35_99
+% of time in gear 2 with engine speed 0–1500 rpm	g2_r0_15
+% of time in gear 2 with engine speed 1500–2500 rpm	g2_r15_25
+% of time in gear 2 with engine speed 2500–3500 rpm	g2_r25_35
+% of time in gear 2 with engine speed >3500 rpm	g2_r35_99
+% of time in gear 3 with engine speed 0–1500 rpm	g3_r0_15
+% of time in gear 3 with engine speed 1500–2500 rpm	g3_r15_25
+% of time in gear 3 with engine speed 2500–3500 rpm	g3_r25_35
+% of time in gear 3 with engine speed >3500 rpm	g3_r35_99
+% of time in gear 4 with engine speed 0–1500 rpm	g4_r0_15
+% of time in gear 4 with engine speed 1500–2500 rpm	g4_r15_25
+% of time in gear 4 with engine speed 2500–3500 rpm	g4_r25_35
+% of time in gear 4 with engine speed >3500 rpm	g4_r35_99
+% of time in gear 5 with engine speed 0–1500 rpm	g5_r0_15
+% of time in gear 5 with engine speed 1500–2500 rpm	g5_r15_25
+% of time in gear 5 with engine speed 2500–3500 rpm	g5_r25_35
+% of time in gear 5 with engine speed >3500 rpm	g5_r35_99
+Positive kinetic energy, PKE: (∑(vf2−vs2))/x, when dv/dt>0	PKE
+, , x=distance	
+% of time when (va)<0	va_0
+% of time when (va) is 0–3	va0_3
+% of time when (va) is 3–6	va3_6
+% of time when (va) is 6–10	va6_10
+% of time when (va) is 10–15	va10_15
+% of time when (va) is >15	va15_99
+Average (va)
+
+
+
+four parameters were excluded from the analysis:
+
+(1) percentage of time between 30 and 50 km/h,
+(2) percentage of time with acceleration between 0 and ,
+(3) percentage of time with engine speed 2500–3500 rpm,
+(4) percentage of time when va was .
+
+
+
+Driving patterns registered during aggressive driving (defined as sudden and high acceleration and heavy braking) 
+were found to cause several times more exhaust and 30–40% higher fuel consumption than calm driving.
+
+
+26 driving pattern parameters were investigated in connection with fuel-use and emissions of HC and NOx. Five driving pattern parameters were found to have significant positive effects on all investigated dependent variables. The most important parameters were:
+
+(1) RPA (see Table 3),
+(2) number of oscillations/100 m,
+(3) percentage of time when acceleration exceeds 1.5 m/s2,
+(4) percentage of time when deceleration was between −1.5 to -2.5 m/s2,
+(5) percentage of time at speed below 15 km/h.

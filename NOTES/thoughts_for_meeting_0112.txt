@@ -1,0 +1,8 @@
+*MPG seemed the highest correlation on one of the papers
+*Can we extract an estimate for average MPG based on jerk or accelleration profiles?
+*could we just test parts of a trip that would be most likely to have significant variation in signatures?
+*Categorize Driver_of_trip into driver style with varying probabilities
+*Categorize trips into types
+*Give each driver average signature and style
+*give each driver average signature for type of trip
+*Fuzzy modeling?

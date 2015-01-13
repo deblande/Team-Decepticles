@@ -1,0 +1,6 @@
+Driving styles and traffic density diagnosis in simulated driving conditions
+
+
+In conclusion of this first analysis, the fuzzy modalities cutting allows a 
+rather good differentiation of the three driving styles (cf. Fig. 3), in fact, 
+far better than the binary one.

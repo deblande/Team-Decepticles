@@ -1,0 +1,54 @@
+Driving Style Recognition for Co-operative Driving: A Survey  
+ 
+ the driver recognizes the road environment
+including road layout, traffic conditions, and the behaviour
+of nearby vehicles, e.g., distance from the vehicle in front,
+and decides actions to take, such as accelerating, braking,
+and/or steering.
+
+Zhang et al. [1] assess vehicle dynamic
+information and perform a categorization of drivers’
+acceleration patterns in specific road curves.
+
+Aggressive
+driving behaviours include speeding, failure to stop, lane
+violations (such as improper passing), and severe violations
+(such as operating recklessly). 
+
+Fancher et
+al. [7] classified drivers into five categories: flow conformist,
+extremist, hunter/tailgater, planner, and ultraconservative. 
+
+data can be explored in order to discover
+repeating patterns and spatio-temporal relationships among
+them [8].
+
+In the work of Mudgal et al. [9], speed profiles of
+different drivers at a roundabout have been modelled, with
+average circulating speed and non-linear parameter such as
+position of maximum acceleration determined using
+Bayesian inference methods. In addition, vehicular emissions
+were estimated using past experimental data. It is found that
+speed profiles differ significantly across drivers, as do the
+mean speeds at the circulating path of the roundabout. 
+
+ acceleration profile, which can be used for
+emission hotspots or aggressive driving behaviour
+recognition.
+
+Spectral analysis of velocity, following distance (only
+simulation data), gas and brake pedal signals is used for
+signal representation by C. Miyajima et al. Then, multiple
+component Gaussian Mixture Models (GMM), applied on a
+0.32-s frame length, are used for data modelling.
+
+Amata et al. [15] introduce two prediction models for
+driving events’ recognition: the first is based on multiple
+linear regression analysis which predicts whether the driver
+will steer or ease up on the accelerator, or brake; the second
+predicts driver decelerating intentions using a Bayesian
+Network. The proposed models predict the three driving
+actions with over 70% accuracy when the use cases are split
+into 9 categories of intersection classes. 
+
+*No real useful data in this article. Might be worth following up some of its sources, though

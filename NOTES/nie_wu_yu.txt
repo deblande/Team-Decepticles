@@ -1,0 +1,84 @@
+For every trip we calculated calculated the average
+speed of the trip, total mileage, trip time and gas usage
+
+In the meantime, we also calculated the speed variance
+and L-2 norm of the acceleration during the trip, which is
+sensitive to gas usage and driver’s information patterns
+
+*we don't get gas usage, but other classification could help in trip Identification
+
+For some vehicles, there are two main peaks in
+the morning and afternoon denoting the daily commuting.
+There are also some relatively even distribution in
+all day for some vehicles, which indicates a higher probability
+of commercial use in work time. This pattern is
+the basis for driver recognition in next section.
+
+*using trip infor for driver recognition?
+
+
+To test if different drivers have driven the car in different
+time periods, we can firstly pick two time periods
+and assume two drivers was driving the car. We test the4
+following statement:
+• H0: The two time periods were droven by two
+drivers.
+verses
+• H1: The two time periods were droven by one same
+driver.
+To make the decision whether we should reject the null
+hypothesis H0, we use classify methods, i.e. Na¨ıve Bayes
+and Support Vector Machine to verify the test. We gain
+our result based on the following procedures.
+1. Randomly choose 80% of the original data from the
+two time periods, use them as the training sample,
+and leaving the residual 20% to be the test dataset.
+2. After labeling training data from the first time period
+as class one, and the other time period as class
+two, we implement Na¨ıve Bayes and SVM on the
+test data to see which class they belong to. We can
+analysis on the outcomes to see whether the original
+two time periods are actually in the same class.
+For example, if the proportion of wrongly predicted
+samples is high in both time periods, we can draw
+the conclusion that there is actually no large difference
+in the two time periods, thus they should be
+in the same class.
+3. If the two periods are in one class, then the classifier
+model (Na¨ıve Bayes or SVM), which is constructed
+based on the training set will not be significant to
+class the test set. The predicted results will only
+based on the sample sizes of training data from two
+time periods. Let
+N1 = #{training sample of time period one}
+N2 = #{training sample of time period two}
+Since the two periods are actually in one class,
+then the testing data from time period one has
+the probability p1 = N1/(N1 + N2) to be assigned
+to class one and has the probability p2 =
+N2/(N1 +N2) to be assigned to class two. By comparing
+the predicting results with p1 and p2, we
+can draw the conclusion whether the two periods
+belong to the same class.
+
+
+
+"Since the relationship between trip average MPG and
+trip average MPH is one of the most key characters
+of driving behavior, we also implemented k-means clustering
+algorithm to explore potential patterns/different
+drivers for one vehicle. FIG. 4 illustrates the k-means
+clustering results of 6 different vehicles."
+
+*Is this true? Can we extract an estimate for average MPG based on jerk or accelleration profiles?
+*could we just test parts of a trip that would be most likely to have significant variation in signatures?
+
+
+
+
+
+
+
+
+
+

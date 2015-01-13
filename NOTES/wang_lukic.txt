@@ -1,0 +1,88 @@
+Fuzzy driving style identifier (DSI)
+is designed referring to the conclusion in [39] that typical
+average acceleration ranges in city cycles for different driving
+styles are: 
+(1) calm driving, 1.48–2.13 ft/s2
+(2) normal driving, 2.13–2.62 ft/s2
+(3) aggressive driving, 2.79–3.61 ft/s2
+
+
+The drivers’ driving styles can commonly be classified into
+three categories, calm, normal, and aggressive, among which
+aggressive driving has great contribution to poor fuel economy
+while calm driving is helpful to improve fuel economy. Several
+methods can be used to recognize drivers’ driving styles,
+including statistic method, jerk analysis, Gaussian mixture
+models, and fuzzy classification method. Then the drivers’
+driving styles can be compensated, and hence the fuel economy
+is improved by reallocating the output torque between ICE and
+motor without changing the total output torque of the powertrain,
+which means the driving intention is strictly followed. 
+
+FROM SOURCES:
+DRIVER'S STYLE CLASSIFICATION USING JERK ANALYSIS
+
+classifies driver's style utilizing the statistical information 
+from the jerk profile and the road way type and traffic congestion 
+level prediction.
+
+"analyzing the
+online jerk profile of the driver combined with the statistics
+of driver styles specific to different roadway types"
+
+There is not much research being done on this particular
+topic. Langari, R.; Jong-Seob Won [5, 6] attempted the
+driver style classification by using the ratio of the standard
+deviation and the average acceleration extracted from the
+acceleration profile within a specified window. If the ratio
+is greater than 100%, the driver style is classified as
+aggressive, if it is between 50% and 100%, the driver style
+is normal, if it is less than 50%, the driver style is calm.
+Then Langari and Won incorporated the predicted driver
+style into their power management strategy.
+
+. Calm driving: a driver that anticipates other road
+user's movement, traffic lights, speed limits, and
+avoiding hard acceleration. This driving style
+should be most fuel efficient.
+• Normal driving: a driver that drives with moderate
+acceleration and braking. This driving style is less
+fuel efficient.
+• Aggressive driving: a driver drives with sudden
+acceleration and heavy braking. This driving style is
+the least fuel efficient.
+• No Speed: the vehicle is not moving.
+
+driver's aggressiveness should be measured
+by how fast the driver accelerates and decelerates
+
+Therefore we consider jerk is a more effective
+feature than acceleration in driver style classification
+
+On a freeway with no traffic congestion,
+even an aggressive driver does not accelerate and decelerate
+that much. However on a local road with heavily congested
+traffics, even a calm driver has to make many brakeacceleration
+moves. Therefore it is important to incorporate
+the driving statistics of roadway types into the driver style
+classification.
+
+1. Calculate jerk profile within window
+2. Calculate standard deviation of jerk for entire window
+3. Detect Current road type and traffic congestion level using a roadway type prediction algorithm
+4. Calculate jerk ratio y=SDj/j_bar where j_bar is average jerk of the predicted current road-type
+5. Map y onto one of the 4 categories above
+
+*Adams Conclusion: Jerk and Accelleration Profiles can both have value to add in creating a signature.
+
+
+
+
+
+
+
+
+
+
+
+

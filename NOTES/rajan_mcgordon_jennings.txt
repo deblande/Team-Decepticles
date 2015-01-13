@@ -1,0 +1,9 @@
+An investigation on the effect of driver style and drivingevents on energy demand of a PHEV
+
+Driver style: Driver has own characteristic way in driving vehicle like
+ starting,stopping and cruising. In the process theycan be efficient, 
+inefficient, aggressive and calm. For a given condition, the variation in 
+vehicle performance due tothe driver behaviour is called as driver style.
+
+Driving events: Route data is divided into city and highway driving. These are
+called as driving events.
