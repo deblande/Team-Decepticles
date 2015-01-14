@@ -34,7 +34,7 @@ def accelleration_category(accelleration_in):
     return dict(calm = accelleration_cat_calm, normal = accelleration_cat_normal, aggressive = accelleration_cat_aggressive)
 
 #Exaple input variables 
-spd_in = 10.0;
+spd_in = 10.2;
 acc_in = 5.03;
 
 speed_in = speed_category(spd_in)
