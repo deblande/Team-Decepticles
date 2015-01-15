@@ -12,7 +12,7 @@ speed_avg  = np.arange(0,40,.1)
 
 # Input Membership Functions
 #Figure out better curves for these
-
+#This is where we decide at what values we classify the profiles as "calm, normal or aggressive"
 # Accelleration
 acc_calm = fuzz.sigmf(accell_avg ,1.5,-1.3)
 acc_normal = fuzz.gaussmf(accell_avg ,2,1.5)
@@ -48,7 +48,11 @@ bx.legend()
 
 plt.show()
 
-
+#Main methods used to calculate the membership in each fuzzy set
+#Returns how "calm" the drivers speed was according to the charts created above
+#Returns how "normal" the drivers speed was according to the charts created above
+#Returns how "aggressive" the drivers speed was according to the charts created above
+#Does the same for accelleration below
 def speed_category(speed_in):
     speed_cat_calm = fuzz.interp_membership(speed_avg,speed_calm,speed_in) # Depends from Step 1
     speed_cat_normal = fuzz.interp_membership(speed_avg,speed_normal,speed_in) # Depends from Step 1
@@ -61,9 +65,9 @@ def accelleration_category(accelleration_in):
     accelleration_cat_aggressive = fuzz.interp_membership(accell_avg,acc_aggressive, accelleration_in)
     return dict(calm = accelleration_cat_calm, normal = accelleration_cat_normal, aggressive = accelleration_cat_aggressive)
 
-#Exaple input variables 
-spd_in = 35.2;
-acc_in = 5.03;
+#Example input variables 
+spd_in = 35.2;#in meters/second
+acc_in = 5.03;#m/s^2 
 
 speed_in = speed_category(spd_in)
 accelleration_in = accelleration_category(acc_in)
@@ -71,17 +75,18 @@ accelleration_in = accelleration_category(acc_in)
 #Print evaluation
 print ""
 print "Fuzzy Set inclusion for inputs:"
-print "For accell_avg = ", acc_in 
+print "Scores for drivers accelleration = ", acc_in 
 print "\tcalm: ",accelleration_in['calm']
 print "\tnormal: ",accelleration_in['normal']
 print "\taggressive: ",accelleration_in['aggressive']
 print ""
-print "For speed_avg = ", spd_in
+print "Scores for drivers speed = ", spd_in
 print "\tcalm: ",speed_in['calm']
 print "\tnormal: ",speed_in['normal']
 print "\taggressive: ",speed_in['aggressive']
-#MAKE RULES HERE
-
+'''
+#MAKE RULES HERE TO GIVE SCORES TO DRIVERS BASED ON ALL VARIABLES DEFINED ABOVE
+#TODO LATER
 rule1 = np.fmax(accelleration_in['calm'],speed_in['calm'])
 rule2 = np.fmax(accelleration_in['normal'],speed_in['normal'])
 rule3 = np.fmax(speed_in['aggressive'],accelleration_in['aggressive'])
@@ -93,7 +98,7 @@ tip = np.arange(0,30,.1)
 
 # Output  Membership Function 
 #Once 'train' for driver profiles, we can compare here to get the most likely driver or drivers
-'''
+
 tip_ch  = fuzz.trimf(tip, [0, 5, 10])
 tip_ave = fuzz.trimf(tip, [10, 15, 25])
 tip_gen = fuzz.trimf(tip, [20, 25, 30])
