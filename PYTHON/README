@@ -1,0 +1,11 @@
+FOR USE WITH PYTHON 2.7.6
+
+scikit-fuzzy requirements:
+
+1. scikit-fuzzy: https://github.com/JDWarner/scikit-fuzzy/
+
+2. scipy: www.scipy.org/scipylib/download.html
+	//NOTE I think you need scipy and numpy but can't remember
+
+3. matplotlip: pip install matplotlib or matplotlib.org/users/installing.html
+
