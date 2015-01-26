@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw23820\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 Random Forest\
+\
+Random forest basically creates a bunch of instances of classification trees. Classification trees compare variables determining which thresholds and rules can be created which best classify the data. I run the random forest algorithm for each driver trip set (200) vs. a set of random trips (200). So it populates a bunch of random trees with things like: if max speed is in x range and trip length is in y range then probability of being driver vs random is z. These random trees are then averaged in order to determine an overall probability. \
+\
+Random forest does not behave well with classes of different sizes, you can see (in the "My submissions tab) my score decreased when I tried to use 1000 random trips vs 200. \
+\
+The randomforest algorithm takes a matrix of size 400xlength(features) where the predicted feature is whether the trip belongs to the random set or the driver set (I assigned a 1 for driver and a 0 for random, as this is the probability that we are looking for). \
+It outputs a list of probability scores for the different trips. \
+\
+As for the code\'85 I have three scripts:\
+\
+simplephysics_f  - a faster function to calculate the speed, acceleration, and jerk. \
+\
+featureCreation_1  - a script that loops through all drivers and creates a feature1.csv file in each 	driver 	folder. This file contains the features listed in the script. This took my computer about 	an hour to complete. \
+\
+Random_forest_submission_v1 - loops through all drivers and runs the random forest algorithm 	once for each driver. Outputs a submission .csv file   (with 118 feature vectors this took about 	4 hours) My 	computer runs two cores with 8 total threads, so I am only using 1 thread for 	computation, I am thinking about inputting some parallel processing\'85\
+ \
+\
+If you are interested in submitting, I would run it with fewer features (it is very very quick with only a handful). }
